@@ -1,7 +1,9 @@
+import { MouseEvent } from "react";
+
 function ListGroup() {
   let items = ["Kisii", "Mogori", "Kenyenya", "Ogembo", "Mogonga"];
   //   Reassigning our array into an empty array
-  items = [];
+  //   items = [];
 
   //   if (items.length === 0)
   //     return (
@@ -16,6 +18,8 @@ function ListGroup() {
   //   const getMessage = () => {
   //     return items.length === 0 ? <p>No items found</p> : null;
   //   };
+  //   Event handler function
+  const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
     <>
@@ -28,8 +32,10 @@ function ListGroup() {
 
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
+        {items.map((item, index) => (
+          <li className="list-group-item" key={item} onClick={handleClick}>
+            {item}
+          </li>
         ))}
       </ul>
     </>
@@ -37,3 +43,5 @@ function ListGroup() {
 }
 
 export default ListGroup;
+
+// Handling click events
