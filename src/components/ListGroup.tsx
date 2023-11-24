@@ -3,9 +3,12 @@ import { MouseEvent, useState } from "react";
 interface Props {
   items: string[];
   heading: string;
+
+  //Define a function that does something upon selecting an item
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   //   Reassigning our array into an empty array
   //   items = [];
 
@@ -47,7 +50,7 @@ function ListGroup({ items, heading }: Props) {
             }
             key={item}
             onClick={() => {
-              setSelectedIndex(index);
+              setSelectedIndex(index), onSelectItem(item);
             }}
           >
             {item}
@@ -63,3 +66,4 @@ export default ListGroup;
 // Handling click events
 // Managing state
 // Passing data via props - In an instance where
+// Passing functions via props
