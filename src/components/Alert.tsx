@@ -10,4 +10,6 @@ const Alert = ({ children }: Props) => {
 
 export default Alert;
 
-// Passing children to a component
+// Passing children to a componenteve
+// Inspecting Components with React Dev Tools
+// Building a button component
