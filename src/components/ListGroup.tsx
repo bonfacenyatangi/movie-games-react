@@ -1,7 +1,11 @@
 import { MouseEvent, useState } from "react";
 
-function ListGroup() {
-  let items = ["Kisii", "Mogori", "Kenyenya", "Ogembo", "Mogonga"];
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: Props) {
   //   Reassigning our array into an empty array
   //   items = [];
 
@@ -25,7 +29,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {/* Now we can use ternary operator to render our items dynamically */}
       {/* {getMessage()} */}
       {/* {items.length === 0 ? <p>No items found</p> : null} */}
@@ -58,3 +62,4 @@ export default ListGroup;
 
 // Handling click events
 // Managing state
+// Passing data via props - In an instance where
