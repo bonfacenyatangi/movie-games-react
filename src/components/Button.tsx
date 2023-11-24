@@ -14,3 +14,5 @@ const Button = ({ children, onClick, color = "primary" }: Props) => {
 };
 
 export default Button;
+
+// Showing an alert
