@@ -67,3 +67,5 @@ export default ListGroup;
 // Managing state
 // Passing data via props - In an instance where
 // Passing functions via props
+// State vs Props
+// Passing children to a component
